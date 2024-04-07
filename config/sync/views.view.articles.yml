@@ -252,7 +252,7 @@ display:
           admin_label: ''
           entity_type: node
           plugin_id: search_api_field
-          label: ''
+          label: Tags
           exclude: false
           alter:
             alter_text: false
@@ -285,12 +285,12 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id

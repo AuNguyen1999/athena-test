@@ -6,6 +6,7 @@ dependencies:
     - facets.facet.tags
   module:
     - facets
+    - system
   theme:
     - olivero
 id: olivero_tags
@@ -21,4 +22,8 @@ settings:
   provider: facets
   context_mapping: {  }
   block_id: olivero_tags
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /artilces
