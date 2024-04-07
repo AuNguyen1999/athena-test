@@ -1,0 +1,14 @@
+<div class='latest-articles'>
+	{% for article in articles %}
+		<div class='latest-articles__item'>
+			<a href='{{ path('entity.node.canonical', {'node': article.id()}) }}' target='_blank'>
+				<h6>
+					{{ article.title() }}
+				</h6>
+			</a>
+		</div>
+	{% endfor %}
+	<div class='latest-articles__view-more'>
+		<a href="{{ path('view.articles.search_page') }}" class='latest-articles__view-more__link'>{{'View more'|t}}</a>
+	</div>
+</div>

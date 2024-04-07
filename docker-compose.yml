@@ -1,0 +1,40 @@
+
+version: '3.8'
+services:
+  web:
+    container_name: athena_web
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    working_dir: /var/www/html
+    hostname: web
+    volumes:
+      - .:/var/www/html
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: athena_test
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: secret
+    depends_on:
+      - database
+
+  database:
+    container_name: athena_database
+    image: mariadb:10.4
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    ports:
+      - "3307:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: athena_test
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: secret
+
+volumes:
+  db-data:
+
+# admin/0258.tzPvh=,

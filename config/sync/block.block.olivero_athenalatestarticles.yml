@@ -1,0 +1,27 @@
+uuid: a9d25a1f-45fc-4697-bb8a-dfe4dd16c7f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - athena_base
+    - system
+  theme:
+    - olivero
+id: olivero_athenalatestarticles
+theme: olivero
+region: sidebar
+weight: 0
+provider: null
+plugin: athena_latest_articles
+settings:
+  id: athena_latest_articles
+  label: 'Latest articles'
+  label_display: visible
+  provider: athena_base
+  numbers_of_items: 10
+  cache_expiry_hours: 24
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

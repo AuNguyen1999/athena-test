@@ -1,0 +1,10 @@
+block.settings.athena_latest_articles:
+  type: block_settings
+  label: "Athena latest articles"
+  mapping:
+    numbers_of_items:
+      type: integer
+      label: "Number of items"
+    cache_expiry_hours:
+      type: integer
+      label: "Cache expiry hours"

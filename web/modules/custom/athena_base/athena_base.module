@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function athena_base_theme() {
+  return [
+    'athena_latest_articles_block' => [
+      'variables' => [
+        'articles' => NULL
+      ]
+    ],
+  ];
+}
